@@ -1,0 +1,30 @@
+import java.util.*;                                                         // Importing the scanner class
+public class time_format 
+{
+
+    public static void main(String a[]) 
+        {                                
+        String s="";
+        String format="",hr="",min="",sec="";
+        int hrs;
+        Scanner ob = new Scanner(System.in);
+        System.out.println("Enter time in 12 hour format-- ");
+        s=ob.nextLine();                                                   //Accepting the input from user
+        hr=s.substring(0,2);                                               // Extracting hours, minutes, seconds and format
+        min=s.substring(3,5);
+        sec=s.substring(7,8);
+        format=s.substring(8);
+        if (format.equals("am"))
+        {
+            System.out.println(hr+":"+min+":"+sec);
+        }
+        else
+        {
+         hrs=Integer.parseInt(hr);
+         hrs=hrs+12;
+         System.out.println(hrs+":"+min+":"+sec);
+        }
+
+    }
+
+}
